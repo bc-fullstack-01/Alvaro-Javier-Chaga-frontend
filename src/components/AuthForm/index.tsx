@@ -4,6 +4,8 @@ import { Container, Stack, TextField, Button } from '@mui/material';
 
 import logo from '../../assets/Logo.svg';
 
+import "./index.css";
+
 interface Props {
     onSubmitForm: any;
     onSubmitButtonText: string;
