@@ -10,17 +10,15 @@ interface TokenUser {
     user: string;
     profile: string;
 };
-
 const Signin = () => {
     const navigate = useNavigate();
-    
+
     const handleLogin = async (user: string, password: string) => {
         try {
             const response = await server.post("/security/login", {
                 user,
                 password,
             });
-
             const { accessToken } = response.data;
             localStorage.setItem("accessToken", accessToken);
             const decoded = jwt_decode(accessToken) as TokenUser;

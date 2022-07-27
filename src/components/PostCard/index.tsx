@@ -9,12 +9,13 @@ import {
 } from "@mui/material";
 import CustomAvatar from "../CustomAvatar";
 import CustomActionIcon from "../CustomActionIcon";
+import { Post } from "../../Models/Post";
 
 interface Props {
     post: Post;
     }
     
-const PostCard = ({ post }: { post: Props }) => {
+const PostCard = ({ post }: Props ) => {
     return (
         <Paper elevation={0} sx={{ marginX: 24 }}>
             <CardHeader

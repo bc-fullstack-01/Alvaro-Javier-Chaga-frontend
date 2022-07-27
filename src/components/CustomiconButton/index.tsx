@@ -1,5 +1,5 @@
+import React, { ReactElement } from 'react';
 import { IconButton } from '@mui/material';
-import React from 'react';
 
 interface Props {
     children: ReactElement;
@@ -8,12 +8,12 @@ interface Props {
 }
 
 const CustomIconButton = ({ children, label, onClickCallback }: Props) => {
-    return(
+    return (
         <IconButton
-        size="large"
-        arial-label={label}
-        colosr="inherit"
-        onClick={() => onClickCallback()}
+            size="large"
+            arial-label={label}
+            color="inherit"
+            onClick={() => onClickCallback()}
         >
             {children}
         </IconButton>

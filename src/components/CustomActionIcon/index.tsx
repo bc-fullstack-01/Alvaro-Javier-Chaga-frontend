@@ -9,7 +9,7 @@ import {
 interface Props {
     commentCount: number;
     likeCount: number;
-    likes: string[]
+    likes: string[];
 }
 
 const CustomActionIcon = ({ commentCount, likeCount, likes }: Props) => {

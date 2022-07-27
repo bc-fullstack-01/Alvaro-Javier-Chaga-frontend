@@ -4,7 +4,7 @@ import PostCard from "../../components/PostCard";
 
 import server from "../../api/server";
 import { Divider } from "@mui/material";
-import { Post } from "../../Models/Post"
+import { Post } from "../../Models/Post";
 
 const Home = () => {
     const token = localStorage.getItem("accesToken");
