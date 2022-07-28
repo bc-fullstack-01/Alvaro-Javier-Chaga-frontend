@@ -13,11 +13,13 @@ import { Post } from "../../Models/Post";
 
 interface Props {
     post: Post;
+    handlePostClick: any;
     }
     
-const PostCard = ({ post }: Props ) => {
+const PostCard = ({ post, handlePostClick }: Props ) => {
     return (
         <Paper elevation={0} sx={{ marginX: 24 }}>
+            <div onClick={() => handlePostClick(post._id)}>
             <CardHeader
                 avatar={<CustomAvatar profileName={post.profile.name} />}
                 title={post.title}
@@ -31,6 +33,7 @@ const PostCard = ({ post }: Props ) => {
                     </Typography>
                 </CardContent>
             )}
+            </div>
             <CardActions>
                 <div
                     style={{

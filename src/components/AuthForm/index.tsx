@@ -13,7 +13,6 @@ interface Props {
     onRouteLink: string;
 
 }
-
 const AuthForm = ({
     onSubmitForm,
     onSubmitButtonText,
