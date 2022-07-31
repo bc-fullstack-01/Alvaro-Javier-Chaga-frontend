@@ -25,7 +25,11 @@ const PostCard = ({ post, handlePostClick }: Props ) => {
                 title={post.title}
             />
             {post.image ? (
-                <CardMedia component="img" image={post.description} alt={post.title} />
+                <CardMedia 
+                component="img" 
+                image={post.description} 
+                alt={post.title} 
+            />
             ) : (
                 <CardContent>
                     <Typography variant="body2" color="text.secondary">

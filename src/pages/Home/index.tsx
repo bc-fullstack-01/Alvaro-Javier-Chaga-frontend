@@ -13,7 +13,7 @@ const Home = () => {
     const token = localStorage.getItem("accesToken");
     const [posts, setPosts] = useState<Post[]>([]);
     const [page, setPage] = useState<number>(0);
-    let [hasMore, setHasMore] = useState<boolean>(true);
+    const [hasMore, setHasMore] = useState<boolean>(true);
 
     useEffect(() => {
         const getPosts = async () => {
@@ -24,7 +24,7 @@ const Home = () => {
                     },
                 });
                 setHasMore(response.data.length > 0);
-                setPosts([...posts, ...response.data ]);
+                setPosts(p => [...p, ...response.data]);
             } catch (err) {
                 console.log(err);
             }

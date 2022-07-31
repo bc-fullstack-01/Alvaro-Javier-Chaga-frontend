@@ -52,7 +52,7 @@ const PostDetail = () => {
             profile: {
                 _id: profileId,
                 name: profileName,
-            }
+            },
         };
             post?.comments.push(newComment);
             setPost(post);
