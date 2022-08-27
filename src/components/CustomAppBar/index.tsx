@@ -20,7 +20,7 @@ const CustomAppBar = ({ title }: Props) => {
   const navigate = useNavigate();
   const token = localStorage.getitem("accessToken");
   const [messageCount, setMessageCount] = useState(0);
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState();
 
   const socket = io(constants.SERVER_ADDRESS, {
     auth: { token },
@@ -94,15 +94,15 @@ const CustomAppBar = ({ title }: Props) => {
             onClickCallback={() => navigate("/home")}
           >
             <HomeIcon />
-            </CustomIconButton>
-            <CustomIconButton
+          </CustomIconButton>
+          <CustomIconButton
             label="notifications"
             onClickCallback={handleClickEmail}
-            >
-              <Badge badgeContent={messageCount} color="secondary">
-                <EmailIcon />
-              </Badge>
-            </CustomIconButton>
+          >
+            <Badge badgeContent={messageCount} color="secondary">
+              <EmailIcon />
+            </Badge>
+          </CustomIconButton>
           <CustomIconButton
             label="show edit"
             onClickCallback={() => navigate("/create")}
